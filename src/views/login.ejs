@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <%- include('./partials/container-header.html') %>
+  <div id="container-login">
+    <form action="/log" method="post">
+      Email : <input type="email" name="email"><br>
+      Mot de passe :<input type="password" name="password">
+      <input type="submit" value="ok">
+    </form>
+    <p>Mot de passe <a href="/password_forget">oublié</a> ?</p>
+    <%  if (ssn && !ssn.clientConnected)  { %>
+      <p>Ce compte est inexistant, veuillez re-taper votre mot de passe ou email.</p>
+      <% } %>
+    </div>
+  </body>
+  </html>

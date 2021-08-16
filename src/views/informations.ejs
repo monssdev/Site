@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informations</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <%- include('partials/container-header.html') %>
+  <form action="">
+    <h2>Description</h2>
+    <label for="about">A propos de vous : </label><br>
+    <textarea name="about" id="" cols="100" rows="10"></textarea><br>
+    <input type="text" placeholder="skills"><br>
+    <input type="file" accept="*/audio" capture>
+  </form>
+  <p>Introduisez vous en vous enregistrant, ce qui permettra au consultants d'avoir un aperçu sur vous.</p>
+  <audio id="player" controls></audio>
+<script>
+
+  var context = new AudioContext()
+</script>
+</body>
+</html>

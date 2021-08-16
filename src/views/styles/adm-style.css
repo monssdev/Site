@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#container-admin{
+  height: 50px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#nav-admin {
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+ul {
+  text-align: center;
+}
+ul li {
+  
+  list-style: none;
+  padding: 22px 22px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+
+#dashboard {
+  margin: 0;
+  background: red;
+  position: absolute;
+  display: inline-block;
+}

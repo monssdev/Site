@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/adm-style.css">
+  <title>Administration</title>
+</head>
+<body>
+  <div id="container-admin">
+    <h1><i>Interface d'administration 0.1</i></h1>
+  </div>
+  <div id="nav-admin">
+    <ul>
+      <li><a href="">Tableau de bord</a></li>
+      <li><a href="">Client</a></li>
+      <li><a href="">Room</a></li>
+      <li><a href="">Socket</a></li>
+      <li><a href="">Serveur</a></li>
+    </ul>
+  </div>
+  <div id="dashboard">
+    <h1>Dashboard</h1><br><br>
+    <div class="card">
+      <h2>Utilisateurs connectés : <%= serverInfos.connected %></h2>
+      <h2>Voyants connectés : </h2>
+    </div>
+    <div class="card">
+    </div> 
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon compte</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <%- include('./partials/container-header.html') %>
+
+  <div id="container-profil">
+    <form action="/user_informations_edit" enctype="multipart/form-data" method="post">
+      <h1>Mes informations</h1>
+      <hr>
+      <h2>Photo de profil</h2>
+      <div id="profil_picture">
+        <img src="<%= ssn.avatarFilename %>" style="width: 80px; height: 80px;" alt="Avatar" id="avatar"><br>
+        <input type="file" accept="image/jpeg" name="avatar">
+      </div>
+      <p>Ajouter un avatar.</p>
+      <input type="submit" value="Enregistrer">
+    </form> 
+    <hr><br>
+    <form action="/user_email_edit" method="post">
+      <h2>Mon compte</h2> 
+      <label>Modifier mon email : </label><input type="text" name="email"><br>
+      <input type="submit" value="Modifier">
+      <% if (ssn.isEmailEdited)  { %>
+        <p>Votre email a était changé.</p>
+      <% } else if(ssn.isEmailEdited == false) { %> 
+        <p>Incorrect cette email est déjà pris. Veuillez saisir une adresse mail valide.</p>
+      <% } %>
+    </form><br>
+    <form action="/user_password_edit">
+      <label>Changer mon mot de passe : </label><input type="password" name="password"><br>
+      <label>Confirmer mon mot de passe : </label><input type="password" name="confirm-password"><br>
+      <input type="submit" value="Modifier">
+    </form>
+    <hr>
+    <h1>Mes choix de consultation</h1>
+    <form action="/user_consultation_choice" method="">
+      <input type="checkbox" name="email"><label for=""> Email</label><br>
+      <input type="checkbox" name="tchat"><label for=""> Tchat</label><br>
+      <input type="checkbox" name="audiotel"><label for=""> Audio téléphonique</label><br>
+      <input type="submit" value="Valider">
+      <hr>
+    </form>
+  </div>
+  <script>
+
+  </script>
+</body>
+</html>

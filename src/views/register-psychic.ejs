@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <%- include('./partials/container-header.html') %>
+  <div id="container-register">
+    <h1>S'inscrire en tant que voyant</h1>
+    <form action="/reg_psychic" method="post" id="submit-form">
+      Email : <input type="email" name="email" placeholder="Email" id="email"><br>
+      Pseudo : <input type="text" name="pseudo" placeholder="Pseudo" id="pseudo"><br>
+      Mot de passe : <input type="text" name="password" placeholder="Password" id="password"><br>
+      Confirmer le mot de passe: <input type="text" placeholder="Confirm password" id="confirm-password"><br>
+      <p>Le mot de passe doit contenir au moins 8 caractère, 1 majuscule et 1 minuscule et 1 chiffre.</p>
+      Age : <input type="date" name="age" id="age"><br>
+      <label for="genre">Vous êtes un(e) : </label><br>
+      <select name="gender" id="genre-select">
+        <option value="male">Homme</option>
+        <option  value="female">Femme</option>
+      </select><br>
+      <!-- <input type="checkbox" name="agree"  id="cgu" value="1"><a href="#">J'ai lu et j'accepte les conditions générales d'utilisation</a><br> -->
+      <input type="button" value="Envoyer" id="submit-btn">
+    </form>
+  </div>
+  <% if (ssn && !ssn.clientConnected) { %>
+    <p>Un compte correspondant à cette email existe déjà</p>
+  <% } %>
+</body>
+</html>

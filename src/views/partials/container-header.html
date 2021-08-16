@@ -1,0 +1,28 @@
+<div class="container-header">
+  <h1>France voyance</h1>
+  <% if (ssn && ssn.clientConnected) { %>
+    <p>Bienvenue, <%= ssn.pseudo %></p>
+  <% } %>
+  <ul id="nav">
+    <% if (ssn && ssn.clientConnected) { %>
+      <li class="nav-item account">
+        <a href="#">Mon compte</a>
+        <div class="sub-nav">
+          <ul class="sub-list">
+            <li class="sub-item"><a href="/profil">Profil</a></li>
+            <li class="sub-item"><a href="">Crédits</a></li>
+            <li class="sub-item"><a href="">Bonus de fidélités</a></li>
+            <% if (ssn.isPsychic == 1) { %>
+              <li class="sub-item"><a href="/infos">Informations</a></li>
+            <% } %>
+            <li class="sub-item"><a href="#">Rendez-vous</a></li>
+            <li class="sub-item"><a href="/logout">Se deconnecter</a></li>
+          </ul>
+        </div>
+      </li>
+    <% } else { %>
+      <li class="nav-item cnx"><a href="/login">Connexion</a></li>
+      <li class="nav-item register"><a href="/register">S'enregistrer</a></li>
+    <% } %>
+    </ul>
+</div>
